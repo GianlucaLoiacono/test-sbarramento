@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    height: 100vh;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    display: grid;
+    background-color: green;
+    border: black solid 2px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    flex-basis: 12em;
+    height: 10em;
+    justify-items: center;
+    align-items: center;
+}
+.uno,.due,.tre,.quattro{
+    display: flex;
+    background-color: white;
+    border: black solid 2px;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+}
+.uno{
+    grid-column: 1;
+    grid-row: 1;
+}
+.due{
+    grid-column: 3;
+    grid-row: 1;
+}
+.tre{
+    grid-column: 2;
+    grid-row: 2;
+}
+.quattro{
+    grid-column: 2;
+    grid-row: 3;
+}
+@media screen and (max-width: 992px ) {
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        background-color: orangered;
+    }
+}
